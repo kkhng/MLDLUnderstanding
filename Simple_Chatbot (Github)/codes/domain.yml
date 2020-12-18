@@ -1,0 +1,53 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - thank_you
+  - response
+
+responses:
+  utter_greet:
+  - text: "Hi! How are you?"
+    buttons:
+    - title: "great"
+      payload: "/mood_great"
+    - title: "sad"
+      payload: "/mood_unhappy"
+
+  utter_cheer_up_1:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/bavhgFk.jpeg"
+
+  utter_cheer_up_2:
+  - text: "And perhaps a music? click here"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye, have a nice day."
+
+  utter_thank_you:
+  - text: "You are welcome."
+
+  utter_follow_up:
+  - text: "I don't understand your reply, I am a mood bot, please type Hi or Bye."
+
+  utter_sorry:
+  - text: "Sorry that didn't help, find a movie to watch then: click here"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
